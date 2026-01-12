@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/e7b6b86684.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monda&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/blog-one.css" />
+
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <script src="./read.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="blog-header">
+        <div class="left">
+          <ul>
+            <a href="./index.html"><li>HOME</li></a>
+            <a href="./index.html#about"><li>ABOUT</li></a>
+          </ul>
+        </div>
+        <div class="right">
+          <img src="./img/threads.png" alt="" />
+          <img src="./img/linkedin-2.png" alt="" />
+          <img src="./img/x.png" alt="" />
+          <p class="logout" onclick="signOut()">log out</p>
+          <p class="login" onclick="openLoginModal()">log in</p>
+        </div>
+      </div>
+      <div class="blog-body">
+        <p class="date"></p>
+        <h1 class="title"></h1>
+        <p class="content"></p>
+
+        <div class="blog-foot">
+          <p class="author bold">AUTHOR</p>
+          <h4 class="author-display"></h4>
+          <p>Read more about this Author</p>
+        </div>
+        <hr class="devider-blog" />
+        <div class="like-section">
+          <div class="like-button">
+            <div class="like-left">
+              <i class="fa-solid fa-thumbs-up"></i>
+              <p>LIKE</p>
+            </div>
+            <div class="like-right" id="show-num-likes"></div>
+          </div>
+          <div class="like-button" id="status">
+            <!-- <div class="like-left">
+              <i class="fa-solid fa-thumbs-down"></i>
+              <p>DISLIKE</p>
+            </div>
+            <div class="like-right">
+              <p>2356</p>
+            </div> -->
+          </div>
+        </div>
+        <div class="comment-section">
+          <div class="make-comment">
+            <div class="comment-title">
+              <h1>Have a comment?</h1>
+            </div>
+            <form action="" id="submit-comment-form">
+              <div class="comment-body">
+                <textarea required id="comment">Your comment here</textarea>
+                <p class="to-add-comment" id="p">
+                  to add a comment, Please
+                  <a onclick="openLoginModal()">login</a>
+                </p>
+                <button
+                  type="submit"
+                  id="for-submit-comment-btn"
+                  class="submit-comment"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="list-comments">
+            <!-- <div class="comment-title">
+              <h1>All comments</h1>
+            </div>
+            <div class="listed">
+              <div class="avatar-comment">
+                <i class="fa-solid fa-circle-user"></i>
+              </div>
+              <div class="content-comment">
+                <div class="comment-head">
+                  <p>Rwema K.</p>
+                  <p>2 months ago</p>
+                </div>
+                <p>Lorem ipsum dolor sit amet, do eiusmod tempor</p>
+                <div class="comment-foot">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <i class="fa-solid fa-thumbs-down"></i>
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+            </div>
+            <div class="listed">
+              <div class="avatar-comment">
+                <i class="fa-solid fa-circle-user"></i>
+              </div>
+              <div class="content-comment">
+                <div class="comment-head">
+                  <p>Rwema K.</p>
+                  <p>2 months ago</p>
+                </div>
+                <p>Lorem ipsum dolor sit amet, do eiusmod tempor</p>
+                <div class="comment-foot">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <i class="fa-solid fa-thumbs-down"></i>
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+            </div>
+            <div class="listed">
+              <div class="avatar-comment">
+                <i class="fa-solid fa-circle-user"></i>
+              </div>
+              <div class="content-comment">
+                <div class="comment-head">
+                  <p>Rwema K.</p>
+                  <p>2 months ago</p>
+                </div>
+                <p>Lorem ipsum dolor sit amet, do eiusmod tempor</p>
+                <div class="comment-foot">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  <i class="fa-solid fa-thumbs-down"></i>
+                  <i class="fa-solid fa-heart"></i>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>&copy 2024 - All rights reserved</p>
+    </footer>
+    <div id="login-modal" class="modal2">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="form">
+          <h1 class="form-title">Login</h1>
+          <form action="" id="login-form">
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="text" id="email" />
+              <div class="error"></div>
+            </div>
+            <div class="field">
+              <label for="password">password</label>
+              <input type="text" id="password" />
+              <div class="error"></div>
+            </div>
+
+            <p>Or</p>
+            <div class="google-btn">
+              <img class="google-icon" src="./img/google-logo.png" alt="" />
+              <p>Sign in with google</p>
+            </div>
+            <div
+              id="signup-success"
+              class="animate__animated animate__fadeInUp"
+            ></div>
+            <button type="submit" class="signup-button">Log In</button>
+
+            <p class="signup-p">
+              New here? <a href="./signup.html">sign up</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

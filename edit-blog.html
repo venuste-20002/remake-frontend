@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monda&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/createblog.css" />
+
+    <script
+      src="https://cdn.tiny.cloud/1/xckg40r14vyks42evs46517x8k7xl9wahdpjj1v4v6yww5fr/tinymce/6/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
+    <script src="./edit-blog.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="sidebar">
+        <div class="user-info">
+          <img src="./img/avatar.png" alt="" srcset="" />
+          <p>Kevin Rwema</p>
+        </div>
+        <div class="links">
+          <a href="./dashboard.html">
+            <div class="link">
+              <img src="./img/dashboard-icon.png" alt="" />
+              <p>DASHBOARD</p>
+            </div>
+          </a>
+          <a href="./users.html">
+            <div class="link">
+              <img src="./img/users.png" alt="" />
+              <p>USERS</p>
+            </div>
+          </a>
+          <a href="./blog-dashboard.html">
+            <div class="link active">
+              <img src="./img/blog.png" alt="" />
+              <p>BLOGS</p>
+            </div>
+          </a>
+          <a href="./messages.html">
+            <div class="link">
+              <img src="./img/messages.png" alt="" />
+              <p>MESSAGES</p>
+            </div>
+          </a>
+        </div>
+        <div class="customize">
+          <h3>CUSTOMIZE</h3>
+          <a href="">
+            <div class="link">
+              <img src="./img/gear.png" alt="" />
+              <p>SETTINGS</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="nav">
+          <div class="nav-icons">
+            <img src="./img/notification.png" alt="" srcset="" />
+            <img src="./img/profile.png" alt="" srcset="" />
+          </div>
+        </div>
+        <div class="welcome">
+          <div class="welcome-title">
+            <h1>Edit Blog</h1>
+          </div>
+          <div class="welcome-search">
+            <input type="text" placeholder="Search" />
+          </div>
+        </div>
+        <div class="edit-blog-container">
+          <div class="loading"></div>
+          <form id="edit-blog-form">
+            <div class="form-flex">
+              <input type="text" id="author" disabled />
+              <input type="text" id="title" required />
+            </div>
+            <textarea id="content"></textarea>
+            <div class="form-flex">
+              <button type="submit">Update</button>
+              <button type="reset" class="cancel">Abort</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

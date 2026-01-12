@@ -1,0 +1,363 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BLOG Dashboard</title>
+    <script
+      src="https://cdn.tiny.cloud/1/xckg40r14vyks42evs46517x8k7xl9wahdpjj1v4v6yww5fr/tinymce/6/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monda&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+
+    <link rel="stylesheet" href="./styles/blog-dashboard.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/e7b6b86684.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./toogle.js" defer></script>
+
+    <script src="./crud.js" defer></script>
+    <script src="./signout.js" defer></script>
+    <script src="./analytics.js" defer></script>
+  </head>
+  <body>
+    <div class="small-nav" id="nav" onclick="toggleNavBar()">
+      <div class="burger shadow">
+        <div id="burger1"></div>
+        <div id="burger2"></div>
+        <div id="burger3"></div>
+      </div>
+    </div>
+    <div id="reveal">
+      <a href="./index.html">Home</a>
+      <a href="./blog-dashboard.html">Blog</a>
+      <a href="./messages.html">MESSAGES</a>
+      <a href="./users.html">USERS</a>
+      <a href="">SETTINGS</a>
+    </div>
+    <main onclick="hideNav()">
+      <div class="sidebar">
+        <div class="user-info">
+          <img src="./img/avatar.png" alt="" srcset="" />
+          <p id="show-username"></p>
+          <p id="show-role"></p>
+        </div>
+        <div class="links">
+          <a href="./dashboard.html">
+            <div class="link">
+              <img src="./img/dashboard-icon.png" alt="" />
+              <p>DASHBOARD</p>
+            </div>
+          </a>
+          <a href="./users.html">
+            <div class="link">
+              <img src="./img/users.png" alt="" />
+              <p>USERS</p>
+            </div>
+          </a>
+          <a href="./subscribers.html">
+            <div class="link">
+              <img src="./img/users.png" alt="" />
+              <p>SUBSCRIBERS</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="link active">
+              <img src="./img/blog.png" alt="" />
+              <p>BLOGS</p>
+            </div>
+          </a>
+          <a href="./messages.html">
+            <div class="link">
+              <img src="./img/messages.png" alt="" />
+              <p>MESSAGES</p>
+            </div>
+          </a>
+        </div>
+        <div class="customize">
+          <h3>CUSTOMIZE</h3>
+          <div class="link">
+            <img src="./img/gear.png" alt="" />
+            <p>SETTINGS</p>
+          </div>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="nav">
+          <div class="nav-icons">
+            <i id="go-home" class="fa-solid fa-house"></i>
+            <i class="fa-solid fa-right-from-bracket" id="signout"></i>
+          </div>
+        </div>
+        <div class="welcome">
+          <div class="welcome-title">
+            <h1>BLOG DASHBOARD</h1>
+          </div>
+          <div class="welcome-search">
+            <input type="text" placeholder="Search" />
+          </div>
+        </div>
+        <div class="featured">
+          <div class="card">
+            <div class="card-upper">
+              <img src="./img/featured/blog.png" alt="" />
+              <div>
+                <p>Blogs</p>
+                <h3 id="count-blog">128</h3>
+              </div>
+            </div>
+            <hr />
+            <div class="card-lower">
+              <img src="./img/info.png" alt="" />
+              <p>Learn More</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-upper">
+              <img src="./img/featured/users.png" alt="" />
+              <div>
+                <p>Users</p>
+                <h3 id="count-user">55</h3>
+              </div>
+            </div>
+            <hr />
+            <div class="card-lower">
+              <img src="./img/info.png" alt="" />
+              <p>Learn More</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-upper">
+              <img src="./img/featured/messages.png" alt="" />
+              <div>
+                <p>Messages</p>
+                <h3 id="count-message">238</h3>
+              </div>
+            </div>
+            <hr />
+            <div class="card-lower">
+              <img src="./img/info.png" alt="" />
+              <p>Learn more</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-upper">
+              <img src="./img/featured/pending.png" alt="" />
+              <div>
+                <p>Subscribers</p>
+                <h3 id="count-subscriber">18</h3>
+              </div>
+            </div>
+            <hr />
+            <div class="card-lower">
+              <img src="./img/info.png" alt="" />
+              <p>Learn More</p>
+            </div>
+          </div>
+        </div>
+        <div class="summary">
+          <div class="summary-left">
+            <div class="flex mb">
+              <h3>List of all Blogs</h3>
+              <button class="btn-flex" id="myBtn">
+                <i class="fa-solid fa-plus add-blog"></i>
+                <p>New</p>
+              </button>
+            </div>
+            <div class="container">
+              <ul class="responsive-table" id="resp-table">
+                <!-- <li class="table-header">
+                  <div class="col col-1">Id</div>
+                  <div class="col col-2">Author</div>
+                  <div class="col col-3">Title</div>
+                  <div class="col col-4">Acton</div>
+                </li>
+                <h2 class="empty-blog">Empty</h2> -->
+                <!-- <li class="table-row">
+                  <div class="col col-1" data-label="Id">42235</div>
+                  <div class="col col-2" data-label="Author">John Doe</div>
+                  <div class="col col-3" data-label="Title">How to code</div>
+                  <div class="col col-4 action-icon" data-label="Action">
+                    <i class="fa-solid fa-eye"></i>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <i class="fa-solid fa-trash"></i>
+                  </div>
+                </li>
+                <li class="table-row">
+                  <div class="col col-1" data-label="Job Id">42235</div>
+                  <div class="col col-2" data-label="Customer Name">
+                    John Doe
+                  </div>
+                  <div class="col col-3" data-label="Amount">How to code</div>
+                  <div
+                    class="col col-4 action-icon"
+                    data-label="Payment Status"
+                  >
+                    <i class="fa-solid fa-eye"></i>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <i class="fa-solid fa-trash"></i>
+                  </div>
+                </li>
+                <li class="table-row">
+                  <div class="col col-1" data-label="Job Id">42235</div>
+                  <div class="col col-2" data-label="Customer Name">
+                    John Doe
+                  </div>
+                  <div class="col col-3" data-label="Amount">How to code</div>
+                  <div
+                    class="col col-4 action-icon"
+                    data-label="Payment Status"
+                  >
+                    <i class="fa-solid fa-eye"></i>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <i class="fa-solid fa-trash"></i>
+                  </div>
+                </li>
+                <li class="table-row">
+                  <div class="col col-1" data-label="Job Id">42235</div>
+                  <div class="col col-2" data-label="Customer Name">
+                    John Doe
+                  </div>
+                  <div class="col col-3" data-label="Amount">How to code</div>
+                  <div
+                    class="col col-4 action-icon"
+                    data-label="Payment Status"
+                  >
+                    <i class="fa-solid fa-eye"></i>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <i class="fa-solid fa-trash"></i>
+                  </div>
+                </li>  -->
+              </ul>
+            </div>
+          </div>
+          <div class="summary-right">
+            <h3>Top weekly Blog author</h3>
+            <div class="card-flex">
+              <div class="top-card">
+                <div class="top-card-img">
+                  <img src="./img/avatar-author.png" alt="" />
+                </div>
+                <div class="top-card-info">
+                  <h6>Carine Murangwa</h6>
+                  <p>carine.m@gmail.com</p>
+                  <p>Tech enthusiast</p>
+                </div>
+                <div class="top-card-metric">
+                  <h2>+12</h2>
+                </div>
+              </div>
+              <div class="top-card">
+                <div class="top-card-img">
+                  <img src="./img/avatar-author.png" alt="" />
+                </div>
+                <div class="top-card-info">
+                  <h6>Carine Murangwa</h6>
+                  <p>carine.m@gmail.com</p>
+                  <p>Tech enthusiast</p>
+                </div>
+                <div class="top-card-metric">
+                  <h2>+12</h2>
+                </div>
+              </div>
+              <div class="top-card">
+                <div class="top-card-img">
+                  <img src="./img/avatar-author.png" alt="" />
+                </div>
+                <div class="top-card-info">
+                  <h6>Carine Murangwa</h6>
+                  <p>carine.m@gmail.com</p>
+                  <p>Tech enthusiast</p>
+                </div>
+                <div class="top-card-metric">
+                  <h2>+12</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="close-model-flex">
+            <p class="modal-title">Create Blog</p>
+            <p class="close">&times;</p>
+          </div>
+
+          <div class="new-blog-container">
+            <form action="" id="add-blog">
+              <div class="form-flex">
+                <input
+                  type="text"
+                  id="input-blog-author"
+                  disabled
+                  placeholder="Author Name"
+                />
+                <input
+                  type="text"
+                  id="input-blog-title"
+                  required
+                  placeholder="Blog Title"
+                />
+              </div>
+              <textarea id="blog-content" class="new-blog" required>
+you</textarea
+              >
+              <div class="form-flex">
+                <button type="submit">Publish</button>
+                <button onClick="clearInputs()">Clear</button>
+              </div>
+              <div id="save-blog-toaster"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="myDeleteModal" class="modal2">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="close-model-flex">
+            <p class="modal-title">
+              Are you sure you want to delete this blog?
+            </p>
+            <p id="x" class="close">&times;</p>
+          </div>
+
+          <div class="new-blog-container">
+            <form action="" id="delete-blog-form">
+              <div class="form-flex">
+                <input type="text" id="show-id" disabled />
+                <input type="text" id="show-author" disabled />
+                <input type="text" id="show-title" disabled />
+              </div>
+
+              <div class="form-flex">
+                <button type="submit">Yes</button>
+                <button id="abort-delete" type="reset">No</button>
+              </div>
+              <div id="save-blog-toaster"></div>
+            </form>
+            <div class="delete-toaster">Delete</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

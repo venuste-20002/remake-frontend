@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monda&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/blog.css" />
+    <script src="./listBlog.js" defer></script>
+  </head>
+  <body>
+    <div class="small-nav" id="nav" onclick="toggleNavBar()">
+      <!-- <button id="btn-toogle" onclick="toogleNavBar()">toggle</button> -->
+      <div class="burger shadow">
+        <div id="burger1"></div>
+        <div id="burger2"></div>
+        <div id="burger3"></div>
+      </div>
+    </div>
+    <div id="reveal">
+      <a href="./index.html">Home</a>
+      <a href="#blog-section" onclick="hideNav()">Blog</a>
+      <a href="./index.html#portfolio">PORTFOLIO</a>
+      <a href="./index.html#contact">GET IN TOUCH</a>
+      <a href="./login.html">Login</a>
+      <a href="./signup.html">Signup</a>
+    </div>
+    <main>
+      <div class="menu">
+        <div>
+          <div class="item">
+            <a href="./index.html">HOME</a>
+          </div>
+          <div class="item">
+            <a href="#blog-section">BLOG</a>
+          </div>
+          <div class="item">
+            <a href="./index.html#portfolio">PORTFOLIO</a>
+          </div>
+          <div class="item">
+            <a href="./index.html#contact">GET IN TOUCH</a>
+          </div>
+          <div class="item login">
+            <a href="./login.html">LOGIN</a>
+          </div>
+          <div onclick="signOut()" class="item logout">
+            <a>LOGOUT</a>
+          </div>
+        </div>
+      </div>
+      <div class="welcome" onclick="hideNav()">
+        <div>
+          <h1>BLOG</h1>
+          <p>
+            Welcome to our blog section, where we delve into captivating topics
+            that inspire, inform, and ignite curiosity. From exploring the
+            latest trends to diving deep into timeless concepts, our blog is
+            your go-to destination for enriching content.
+          </p>
+          <p>
+            Join us on a journey of discovery as we share insights, stories, and
+            perspectives to enrich your mind and spark meaningful conversations
+          </p>
+          <a href="#blog-section"
+            ><button class="learn-more">Learn More</button></a
+          >
+        </div>
+      </div>
+    </main>
+    <section id="blog-section" class="blog-container" onclick="hideNav()">
+      <!-- <div>
+        <p class="date">Nov 21, 2023</p>
+        <p class="title">
+          CLIENT HIGHLIGHTS: ACCESS INTERNATIONAL PARTNERSHIP IN IT
+        </p>
+        <p class="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet
+          magna neque. Nunc quam enim, tincidunt in consectetur sit amet, congue
+          ut massa. Pellentesque non elit sit amet augue gravida commod
+        </p>
+        <a href="./blog-one.html"><button>FULL STORY</button></a>
+        <p></p>
+      </div> -->
+      <!-- <div>
+        <p class="date">Nov 21, 2023</p>
+        <p class="title">
+          CLIENT HIGHLIGHTS: ACCESS INTERNATIONAL PARTNERSHIP IN IT
+        </p>
+        <p class="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet
+          magna neque. Nunc quam enim, tincidunt in consectetur sit amet, congue
+          ut massa. Pellentesque non elit sit amet augue gravida commod
+        </p>
+        <a href="./blog-one.html"><button>FULL STORY</button></a>
+        <p></p>
+      </div> -->
+      <!-- <div>
+        <p class="date">Nov 21, 2023</p>
+        <p class="title">
+          CLIENT HIGHLIGHTS: ACCESS INTERNATIONAL PARTNERSHIP IN IT
+        </p>
+        <p class="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet
+          magna neque. Nunc quam enim, tincidunt in consectetur sit amet, congue
+          ut massa. Pellentesque non elit sit amet augue gravida commod
+        </p>
+        <a href="./blog-one.html"><button>FULL STORY</button></a>
+        <p></p>
+      </div> -->
+      <!-- <div>
+        <p class="date">Nov 21, 2023</p>
+        <p class="title">
+          CLIENT HIGHLIGHTS: ACCESS INTERNATIONAL PARTNERSHIP IN IT
+        </p>
+        <p class="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet
+          magna neque. Nunc quam enim, tincidunt in consectetur sit amet, congue
+          ut massa. Pellentesque non elit sit amet augue gravida commod
+        </p>
+        <a href="./blog-one.html"><button>FULL STORY</button></a>
+        <p></p>
+      </div> -->
+    </section>
+    <footer>
+      <p>&copy 2024 - All rights reserved</p>
+    </footer>
+    <script src="./toogle.js" defer></script>
+  </body>
+</html>

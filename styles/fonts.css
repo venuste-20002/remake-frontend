@@ -1,0 +1,113 @@
+.nav-items ul {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.center-col h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.center-col p {
+  font-family: "Montserrat", sans-serif;
+}
+
+.button button {
+  font-family: "Montserrat", sans-serif;
+}
+
+#skills {
+  font-family: "Montserrat", sans-serif;
+}
+
+#portfolio {
+  font-family: "Montserrat", sans-serif;
+}
+
+#about {
+  font-family: "Montserrat", sans-serif;
+}
+
+#contact,
+footer {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* for blog page */
+.item a {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.welcome {
+  font-family: "Montserrat", sans-serif;
+}
+
+.learn-more {
+  font-family: "Montserrat", sans-serif;
+}
+
+p.date {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+p.title {
+  font-family: "Monda", sans-serif;
+}
+
+p.description {
+  font-family: "Monda", sans-serif;
+}
+
+#blog-section div > button {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* for Signup */
+.form-title {
+  font-family: "Montserrat", sans-serif;
+}
+
+.form form > input::placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.google-btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #00000065;
+}
+
+.form p {
+  font-family: "Montserrat", sans-serif;
+}
+
+.signup-button {
+  font-family: "Montserrat", sans-serif;
+}
+
+.blog-header ul {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.blog-body p.date {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.blog-body h1.title {
+  font-family: "Monda", sans-serif;
+}
+
+.blog-body p.content {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.blog-foot,
+.sidebar,
+.main-content {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.welcome-title > h1 {
+  color: white;
+  font-size: 1.3rem;
+  font-family: "Monda", sans-serif;
+}

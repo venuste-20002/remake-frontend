@@ -1,0 +1,592 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #171c28;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto 3rem auto;
+}
+
+.blog-header {
+  background-color: #414a53;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.blog-header > * {
+  flex: 1;
+}
+
+.left ul {
+  display: flex;
+  list-style-type: none;
+  gap: 40px;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.left li {
+  padding: 3px 0;
+  color: white;
+  font-weight: bold;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.right img {
+  width: 1.3rem;
+  height: auto;
+}
+
+.loading {
+  padding: 15px;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+#p {
+  display: none;
+}
+.to-add-comment {
+  border: 1px solid rgb(219, 219, 219);
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.to-add-comment a {
+  text-decoration: underline;
+  color: rgb(37, 15, 163);
+  cursor: pointer;
+}
+
+.blog-body {
+  background-color: white;
+  padding: 4rem 2rem;
+}
+
+.blog-body .date {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.blog-body h1.title {
+  text-align: center;
+  width: 70%;
+  margin: 0 auto 2rem auto;
+  font-size: 2.8rem;
+}
+
+p.content {
+  margin-bottom: 1rem;
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 146%;
+}
+
+pre {
+  font-family: "Monda", sans-serif;
+  width: 100%;
+}
+
+.blog-foot {
+  padding-top: 2rem;
+}
+
+p.content img {
+  width: 30%;
+
+  height: auto;
+}
+
+.author {
+  color: #414a53;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+hr.devider-blog {
+  margin: 2rem 0;
+  height: 1px;
+  border-top: 1px solid #e2dfdf;
+}
+
+.like-section {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.like-section > div {
+  border: 2px solid #959292;
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(238, 237, 237, 0.438);
+  font-family: "Montserrat", sans-serif;
+  color: #4e4e4e;
+  /* border: 2px solid green; */
+}
+
+.like-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.like-button {
+  cursor: pointer;
+}
+
+.like-button i {
+  font-size: 12px;
+}
+
+.like-left p {
+  font-size: 14px;
+}
+
+.like-right {
+  padding-left: 10px;
+  border-left: 1px solid #959292;
+}
+
+.like-right p {
+  font-weight: bold;
+}
+
+.comment-section {
+  display: flex;
+  background-color: rgba(238, 237, 237, 0.438);
+  padding: 20px;
+  gap: 1rem;
+}
+
+.make-comment {
+  flex: 0 0 60%;
+}
+
+.make-comment textarea {
+  width: 100%;
+  min-height: 6rem;
+  padding: 10px;
+  border: 1px solid #959292;
+  border-radius: 4px;
+  resize: none;
+}
+
+.make-comment textarea {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.list-comments {
+  flex: 1;
+}
+
+.listed {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  padding: 5px 5px 10px 5px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+  margin-bottom: 1rem;
+  align-items: center;
+  border-radius: 5px;
+  background-color: white;
+  font-family: "Nunito Sans", sans-serif;
+}
+.avatar-comment {
+  flex: 1;
+  text-align: center;
+  align-self: flex-start;
+  padding: 5px 0;
+}
+
+.avatar-comment i {
+  font-size: 2rem;
+}
+.content-comment {
+  flex: 0 0 80%;
+}
+
+.content-comment > p {
+  font-size: 0.9rem;
+  text-align: left;
+  color: #35373a;
+}
+
+.comment-head {
+  display: flex;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.comment-head p:nth-child(1) {
+  font-weight: bold;
+}
+
+.comment-head p:nth-child(2) {
+  font-size: 0.9rem;
+  color: #959292;
+}
+.comment-foot {
+  display: flex;
+  margin-top: 20px;
+  gap: 25px;
+}
+
+.comment-foot i {
+  color: #a3a3a3;
+}
+
+.comment-title {
+  background-color: #414a53;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.5rem;
+  margin-bottom: 15px;
+}
+
+.form-flex {
+  padding: 3px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form-flex input {
+  flex: 0 0 49%;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #959292;
+  border-radius: 4px;
+}
+
+.form-flex input::placeholder {
+  font-family: "Nunito Sans", sans-serif;
+  color: #171c28;
+}
+
+.submit-comment {
+  padding: 10px 30px;
+  margin-top: 1rem;
+  color: white;
+  background-color: #414a53;
+  border: none;
+  border-radius: 4px;
+
+  font-family: "Nunito Sans", sans-serif;
+}
+
+footer {
+  background-color: #1c2834;
+  color: #7f8286;
+  padding: 15px;
+  text-align: center;
+}
+
+p.no-comment {
+  border: 1px solid rgb(219, 219, 219);
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* login modal */
+#login-modal {
+  display: none;
+}
+.modal2 {
+  /* Hidden by default */
+
+  position: fixed; /* Stay in place */
+  z-index: 99999; /* Sit on top */
+
+  left: 0;
+  top: 0;
+  font-family: "Montserrat", sans-serif;
+  width: 100%; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+.modal-content {
+  border-radius: 5px;
+
+  width: 300px;
+  margin: 100px auto;
+  background-color: white;
+}
+.form {
+  padding: 30px 20px;
+  background-color: #fcfcfcf5;
+  border-radius: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form > h1 {
+  margin-bottom: 2.5rem;
+  font-size: 1.2rem;
+}
+.form > h1,
+form > p {
+  text-align: center;
+}
+
+.form input {
+  padding: 0.2rem 1rem;
+  border-radius: 7px;
+  border: 1px solid #bebbbb;
+  height: 35px;
+  display: block;
+  width: 100%;
+}
+
+.google-btn {
+  border-radius: 7px;
+  border: 1px solid #bebbbb;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 35px;
+  padding: 0.4rem 0 0.4rem 0;
+}
+
+.google-btn i {
+  font-size: 1.2rem;
+}
+
+.signup-p {
+  font-size: 0.8rem;
+}
+
+p > a {
+  color: #171c28;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+}
+
+form button {
+  padding: 0.6rem 0;
+  border-radius: 7px;
+  height: 35px;
+  border: 1px solid #bebbbb;
+  background-color: #171c28;
+  color: white;
+}
+
+label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  color: #545454;
+}
+
+input {
+  transition: border 0.2s ease-in-out;
+}
+
+/* Target input field that is descedent of an element with both .field and .success */
+.field.success input {
+  border: 1px solid #09c372;
+}
+
+/* Target input field that is descedent of an element with both .field and .error */
+.field.error input {
+  border: 1px solid #ff3860;
+}
+
+/* targets class error which is descendent of class field */
+.field .error {
+  color: #ff3860;
+
+  font-size: 10px;
+
+  padding-left: 3px;
+}
+
+.password-error {
+  margin-left: 10px;
+}
+
+#signup-success {
+  display: none;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  font-family: "Montserrat";
+}
+
+.right p.logout,
+.right p.login {
+  font-family: "Montserrat";
+  color: white;
+  border-bottom: 2px solid white;
+  display: block;
+  cursor: pointer;
+  display: none;
+}
+
+#status {
+  display: none;
+}
+
+@media screen and (max-width: 428px) {
+  .container {
+    width: 100%;
+  }
+
+  .blog-header {
+    padding: 10px;
+  }
+
+  .left ul {
+    gap: 20px;
+    font-size: 0.8rem;
+  }
+
+  .right {
+    gap: 20px;
+  }
+
+  .right img {
+    width: 1rem;
+    height: auto;
+  }
+
+  .blog-body {
+    padding: 1rem;
+  }
+
+  .blog-body h1.title {
+    width: 100%;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+  }
+
+  .blog-foot {
+    padding: 10px 0;
+  }
+
+  .like-section {
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+  }
+
+  .comment-section {
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .comment-title h1 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  button.submit-comment {
+    text-align: center;
+    width: 60%;
+    margin: 5% 20%;
+  }
+}
+
+@media screen and (min-width: 429px) and (max-width: 1250px) {
+  .container {
+    width: 95%;
+  }
+
+  .blog-header {
+    padding: 15px;
+  }
+
+  .left ul {
+    gap: 15px;
+    font: 0.8rem;
+  }
+
+  .right {
+    gap: 20px;
+  }
+
+  .blog-body {
+    padding: 1.5rem 1rem;
+  }
+
+  .blog-body h1.title {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+
+  .comment-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .avatar-comment {
+    padding: 15px;
+  }
+
+  .avatar-comment i {
+    font-size: 3.5rem;
+  }
+}

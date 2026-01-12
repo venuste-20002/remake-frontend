@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REMAKE Labs - STEM & Robotics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e7b6b86684.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="./contact.js" defer></script>
+    
+    <style>
+      .remake-logo-container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .remake-logo-icon {
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(to bottom right, #3b82f6, #a855f7, #ec4899);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .remake-logo-icon span {
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .remake-logo-text h1 {
+        font-size: 24px;
+        font-weight: bold;
+        background: linear-gradient(to right, #2563eb, #9333ea, #db2777);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin: 0;
+        line-height: 1;
+      }
+
+      .remake-logo-text p {
+        font-size: 14px;
+        font-weight: 300;
+        color: #4b5563;
+        letter-spacing: 0.1em;
+        margin: 2px 0 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar container">
+        <div class="branding">
+          <div class="remake-logo-container">
+            <div class="remake-logo-icon">
+              <span>R</span>
+            </div>
+            <div class="remake-logo-text">
+              <h1>REMAKE</h1>
+              <p>Labs</p>
+            </div>
+          </div>
+        </div>
+        <div class="nav-items">
+          <ul >
+            <a href="#hero"><li>HOME</li></a>
+            <a href="#about"><li>ABOUT</li></a>
+            <a href="#portfolio"><li>MODELS</li></a>
+            <a href="#skills"><li>PROGRAM</li></a>
+            <a class="login" href="./login.html"><li>LOGIN</li></a>
+            <a href="#contact"><li>CONTACT</li></a>
+            <a id="logout" href=""
+              ><i class="fa-solid fa-right-from-bracket"></i
+            ></a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="hero" class="container">
+      <div class="hero-left">
+        <div class="center-col">
+          <div style="text-align: center; margin-bottom: 3rem;">
+            <h1 style="color: white; font-size: 2.8rem; font-weight: 700; margin-bottom: 1rem;">STEM & ROBOTICS SYSTEM FOR SCHOOLS</h1>
+             <div style="width: 100px; height: 4px; background-color: #ffd700; margin: 0 auto;"></div>
+          </div>
+          <p>REMAKE Labs does not replace schools — we empower them with systems.
+          </p>
+          <div class="social-icons">
+            <img src="./img/linkedin.png" alt="" />
+            <img src="./img/github.png" alt="" />
+            <img src="./img/instagram.png" alt="" />
+            <img src="./img/twitter.png" alt="" />
+            <img src="./img/facebook.png" alt="" />
+          </div>
+          <div class="button">
+            <button onclick="window.location.href='#contact'">
+              CONTACT US
+            </button>
+            >
+              <button>SEE OUR BROCHURE</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="./img/1.png" alt="" srcset="" />
+      </div>
+    </section>
+   <!-- Background Section -->
+    <section id="background" style="background: linear-gradient(to right, #ffffff 0%, #ffffff 50%, #171c28 50%, #171c28 100%); padding: 80px 0;">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 3rem;">
+          <h1 style="color: #667eea; font-size: 2.8rem; font-weight: 700; margin-bottom: 1rem;">BACKGROUND & PROBLEM STATEMENT</h1>
+          <div style="width: 100px; height: 4px; background-color: #ffd700; margin: 0 auto;"></div>
+        </div>
+        
+        <div style="background: rgba(255, 255, 255, 0.95); border-radius: 15px; padding: 3rem; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
+          <p style="font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 2rem;">
+            There is a growing gap between traditional education systems
+            and the skills required for the digital, technological, and industrial
+            future. While science and mathematics are part of the national
+            curriculum, practical STEM, robotics, AI, and innovation-based
+            learning remain limited, especially in terms of:
+          </p>
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2.5rem 0;">
+            <div style="background: linear-gradient(135deg, #171c28 0%, #171c28 100%); padding: 1.5rem; border-radius: 10px; color: white; box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);">
+              <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔧</div>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Hands-on Learning Infrastructure</h3>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #171c28 0%, #171c28 100%); padding: 1.5rem; border-radius: 10px; color: white; box-shadow: 0 5px 15px rgba(240, 147, 251, 0.4);">
+              <div style="font-size: 2rem; margin-bottom: 0.5rem;">👨‍🏫</div>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Teacher Capacity in Emerging Technologies</h3>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #171c28 0%, #171c28 100%); padding: 1.5rem; border-radius: 10px; color: white; box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);">
+              <div style="font-size: 2rem; margin-bottom: 0.5rem;">📚</div>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Standardized STEM Delivery Models</h3>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #171c28 0%, #171c28 100%); padding: 1.5rem; border-radius: 10px; color: white; box-shadow: 0 5px 15px rgba(67, 233, 123, 0.4);">
+              <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌍</div>
+              <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Access to Global STEM Pathways & Competitions</h3>
+            </div>
+          </div>
+          
+          <div style="background: linear-gradient(135deg, #171c28 0%, #171c28 100%); padding: 2rem; border-radius: 10px; margin-top: 2rem; border-left: 5px solid #171c28;">
+            <p style="font-size: 1.15rem; line-height: 1.8; color: #fff; margin: 0; font-weight: 500;">
+              ⚠️ Most schools lack structured systems to sustainably introduce
+              STEM, robotics, and AI beyond isolated workshops or short-term
+              projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- School Adoption Models (Portfolio Section) -->
+     <section id="portfolio" style="background: #171c28; padding: 80px 0;">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 3rem;">
+          <h1 style="color: white; font-size: 2.8rem; font-weight: 700; margin-bottom: 1rem;">SCHOOL ADOPTION MODELS</h1>
+          <div style="width: 100px; height: 4px; background-color: #ffd700; margin: 0 auto;"></div>
+        </div>
+        <p class="center portfolio-tag" style="color: rgba(255, 255, 255, 0.8);">
+          <span style="color: #ffd700;">&lt;Flexible models&gt;</span> to fit different school realities
+          <span style="color: #ffd700;">&lt;/models&gt;</span>
+        </p>
+
+        <div class="portfolio-flex" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+          <div style="background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <h3 style="color: #171c28; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Model 1 – STEM & Robotics Club</h3>
+            <p style="color: #555; line-height: 1.7; margin-bottom: 1.5rem;">
+              Weekly extracurricular sessions providing hands-on learning experiences. Perfect low-cost entry point for schools beginning their STEM journey.
+            </p>
+            <a href="#contact" style="color: #ffd700; font-weight: 600; text-decoration: none; border-bottom: 2px solid #ffd700; padding-bottom: 3px; transition: color 0.3s ease;">LEARN MORE →</a>
+          </div>
+          <div style="background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <h3 style="color: #171c28; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Model 2 – Curriculum-Integrated Program</h3>
+            <p style="color: #555; line-height: 1.7; margin-bottom: 1.5rem;">
+              Embedded into science or technology subjects with teacher-led delivery. Seamlessly integrates with existing curriculum structures.
+            </p>
+            <a href="#contact" style="color: #ffd700; font-weight: 600; text-decoration: none; border-bottom: 2px solid #ffd700; padding-bottom: 3px; transition: color 0.3s ease;">LEARN MORE →</a>
+          </div>
+          <div style="background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+            <h3 style="color: #171c28; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600;">Model 3 – STEM Center School</h3>
+            <p style="color: #555; line-height: 1.7; margin-bottom: 1.5rem;">
+              Full robotics lab setup with competition hosting capabilities. Position your school as a STEM leadership hub in your region.
+            </p>
+            <a href="#contact" style="color: #ffd700; font-weight: 600; text-decoration: none; border-bottom: 2px solid #ffd700; padding-bottom: 3px; transition: color 0.3s ease;">LEARN MORE →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Program Components (Skills Section) -->
+    <section id="skills">
+      <div class="skills-flex container">
+        <div class="skills-flex-left">
+          <div>
+            <div style="text-align: center; margin-bottom: 3rem;">
+              <h1 style="color: black; font-size: 2.8rem; font-weight: 700; margin-bottom: 1rem;">PROGRAM COMPONENTS</h1>
+              <div style="width: 100px; height: 4px; background-color: #ffd700; margin: 0 auto;"></div>
+            </div>
+
+            <p>
+              A comprehensive system designed to deliver future-ready STEM education through proven methods, trained educators, and scalable models — preparing African youth for innovation, industry, and global competition.
+            </p>
+          </div>
+        </div>
+        <div class="skills-flex-right">
+          <div class="item box1">
+            <div class="center">
+              <img src="./img/project-discovery.svg" alt="" srcset="" />
+              <p>Curriculum Framework</p>
+            </div>
+          </div>
+          <div class="item box2">
+            <div class="center">
+              <img src="./img/database.svg" alt="" srcset="" />
+              <p>Trainer Certification</p>
+            </div>
+          </div>
+          <div class="item box2">
+            <div class="center">
+              <img src="./img/development.svg" alt="" />
+              <p>Implementation Support</p>
+            </div>
+          </div>
+          <div class="item box1">
+            <div class="center">
+              <img src="./img/deployment.svg" alt="" />
+              <p>Quality Assurance</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Implementation Approach (Second Portfolio) -->
+    <section id="portfolio">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 3rem;">
+          <h1 style="color: white; font-size: 2.8rem; font-weight: 700; margin-bottom: 1rem;">IMPLEMENTATION APPROACH</h1>
+          <div style="width: 100px; height: 4px; background-color: #ffd700; margin: 0 auto;"></div>
+        </div>
+        <p class="center portfolio-tag">
+          <span class="yellow">&lt;Four-phase&gt;</span> structured deployment
+          <span class="yellow">&lt;/approach&gt;</span>
+        </p>
+
+        <div class="portfolio-flex">
+          <div>
+            <h3>Phase 1 – School Engagement</h3>
+            <p>
+              Needs assessment, leadership orientation, and selection of the most appropriate adoption model for your school's unique context.
+            </p>
+            <a href="#contact">GET STARTED</a>
+          </div>
+          <div>
+            <h3>Phase 2 – Capacity Building</h3>
+            <p>
+              Trainer certification, curriculum onboarding, and equipment guidance to ensure sustainable program delivery.
+            </p>
+            <a href="#contact">GET STARTED</a>
+          </div>
+          <div>
+            <h3>Phase 3 – Program Delivery</h3>
+            <p>
+              Classroom or club sessions, student projects, innovations, and participation in innovation challenges and competitions.
+            </p>
+            <a href="#contact">GET STARTED</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about">
+      <div class="about-container">
+        <div class="about-left">
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <h1 style="color: black; font-size: 2.8rem; font-weight: 700; margin-bottom: 1rem;">We Build<br />Education Systems</h1>
+            <div style="width: 100px; height: 4px; background-color: #ffd700; margin: 0 auto;"></div>
+          </div>
+          <p class="xyz">
+            Not one-off programs, <br />but sustainable STEM solutions
+          </p>
+          <a href="#portfolio">
+            <button class="button-arrow">
+              <p>SEE OUR MODELS</p>
+              <img src="./img/arrow.png" />
+            </button>
+          </a>
+        </div>
+        <div class="about-right">
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <h1 style="color: black; font-size: 2.8rem; font-weight: 700; margin-bottom: 1rem;">We Empower<br />Educators</h1>
+            <div style="width: 100px; height: 4px; background-color: #ffd700; margin: 0 auto;"></div>
+          </div>
+          <p class="xyz">Through Certification <br />Training and Continuous Support</p>
+          <a href="#contact">
+            <button class="button-arrow">
+              <p>PARTNER WITH US</p>
+              <img src="./img/arrow.png" />
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contact Section (unchanged) -->
+    <section id="contact">
+      <div class="contact-flex container">
+        <div class="contact-left">
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <h1 style="color: white; font-size: 2.8rem; font-weight: 700; margin-bottom: 1rem;">Let's connect</h1>
+            <div style="width: 100px; height: 4px; background-color: #ffd700; margin: 0 auto;"></div>
+          </div>
+          <p>we would like to hear from you, <br />what's your bold idea?</p>
+          <div class="contact-details">
+            <div class="detail">
+              <img src="./img/email.webp" alt="" />
+              <p>remake@gmail.com</p>
+            </div>
+            <div class="detail">
+              <img src="./img/phone.webp" alt="" />
+              <p>+250 787 682 839</p>
+            </div>
+            <div class="detail">
+              <img src="./img/website.webp" alt="" />
+              <p>www.remake.com</p>
+            </div>
+            <div class="detail">
+              <img src="./img/location.webp" alt="" srcset="" />
+              <p>Kigali, Rwanda</p>
+            </div>
+          </div>
+          <div class="subscribe" id="subscribe">
+            <div class="subscribe-text">
+              <i class="fa-regular fa-newspaper"></i>
+              <p>subscribe to our Newsletter</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right">
+          <div class="form-container">
+            <form id="contact-form" action="">
+              <div class="input-item" d>
+                <p>name</p>
+                <input type="text" id="user-name" required />
+              </div>
+              <div class="input-item">
+                <p>Email</p>
+                <input type="email" id="user-email" required />
+              </div>
+              <div class="input-item">
+                <p>Message</p>
+                <textarea
+                  required
+                  name=""
+                  id="user-message"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+              <div class="success animate__animated animate__fadeInUp"></div>
+              <div class="input-item">
+                <button type="submit">SEND</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy 2025 REMAKE Labs - All rights reserved</p>
+    </footer>
+    <div onClick="signOut()" class="floating-logout">
+      <i class="fa-solid fa-right-from-bracket"></i>
+    </div>
+    <div class="logout-txt">Log out</div>
+
+    <div onClick="toDashboard()" class="floating-dashboard">
+      <i class="fa-solid fa-chart-line"></i>
+    </div>
+    <div class="dashboard-txt">Dashboard</div>
+    <div id="subscribe-modal">
+      <div class="center-modal">
+        <div class="modal-content">
+          <div class="close-modal">
+            <p id="x" class="close">&times;</p>
+          </div>
+
+          <h1>Subscribe to our Newsletter</h1>
+          <p>
+            Stay updated with our latest STEM programs, exclusive opportunities, and exciting innovations! Subscribe to our newsletter for all the latest delivered straight to your inbox.
+          </p>
+          <div class="subscribe-form">
+            <form action="" id="subs-form">
+              <div class="flex">
+                <div>
+                  <label for="full-name-sub">Fullname</label>
+                  <div class="flex-icon">
+                    <div class="icon"><i class="fa-solid fa-user"></i></div>
+                    <input id="full-name-sub" required type="text" />
+                  </div>
+                </div>
+                <div>
+                  <label for="email-sub">Email</label>
+                  <div class="flex-icon">
+                    <div class="icon"><i class="fa-solid fa-at"></i></div>
+                    <input required type="email" id="email-sub" />
+                  </div>
+                </div>
+              </div>
+              <p class="not-you">
+                not you? <span class="logout-span">log out</span>
+              </p>
+              <div class="sub-status">Loading</div>
+              <button class="sub-btn" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

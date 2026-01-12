@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monda&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/dashboard.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./barchart.js" defer></script>
+    <script src="./toogle.js" defer></script>
+    <script src="./signout.js" defer></script>
+    <script src="./dashboard.js" defer></script>
+    <script src="analytics.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/e7b6b86684.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="small-nav" id="nav" onclick="toggleNavBar()">
+      <div class="burger shadow">
+        <div id="burger1"></div>
+        <div id="burger2"></div>
+        <div id="burger3"></div>
+      </div>
+    </div>
+    <div id="reveal">
+      <a href="./index.html">Home</a>
+      <a href="./blog-dashboard.html" onclick="hideNav()">Blog</a>
+      <a href="./messages.html">MESSAGES</a>
+      <a href="./users.html">USERS</a>
+      <a href="">SETTINGS</a>
+    </div>
+    <main onclick="hideNav()">
+      <div class="sidebar">
+        <div class="user-info">
+          <img src="./img/avatar.png" alt="" srcset="" />
+          <p id="show-username"></p>
+          <p id="show-role"></p>
+        </div>
+        <div class="links">
+          <a href="">
+            <div class="link active">
+              <img src="./img/dashboard-icon.png" alt="" />
+              <p>DASHBOARD</p>
+            </div>
+          </a>
+          <a href="./users.html">
+            <div class="link">
+              <img src="./img/users.png" alt="" />
+              <p>USERS</p>
+            </div>
+          </a>
+          <a href="./subscribers.html">
+            <div class="link">
+              <img src="./img/users.png" alt="" />
+              <p>SUBSCRIBERS</p>
+            </div>
+          </a>
+          <a href="./blog-dashboard.html">
+            <div class="link">
+              <img src="./img/blog.png" alt="" />
+              <p>BLOGS</p>
+            </div>
+          </a>
+          <a href="./messages.html">
+            <div class="link">
+              <img src="./img/messages.png" alt="" />
+              <p>MESSAGES</p>
+            </div>
+          </a>
+        </div>
+        <div class="customize">
+          <h3>CUSTOMIZE</h3>
+          <div class="link">
+            <img src="./img/gear.png" alt="" />
+            <p>SETTINGS</p>
+          </div>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="nav">
+          <div class="nav-icons">
+            <i id="go-home" class="fa-solid fa-house"></i>
+            <i class="fa-solid fa-right-from-bracket" id="signout"></i>
+          </div>
+        </div>
+        <div class="welcome">
+          <div class="welcome-title">
+            <h1>MAIN DASHBOARD</h1>
+          </div>
+          <div class="welcome-search">
+            <input type="text" placeholder="Search" />
+          </div>
+        </div>
+        <div class="featured">
+          <div class="card">
+            <div class="card-upper">
+              <img src="./img/featured/blog.png" alt="" />
+              <div>
+                <p>Blogs</p>
+                <h3 id="count-blog">128</h3>
+              </div>
+            </div>
+            <hr />
+            <div class="card-lower">
+              <img src="./img/info.png" alt="" />
+              <p>Learn More</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-upper">
+              <img src="./img/featured/users.png" alt="" />
+              <div>
+                <p>Users</p>
+                <h3 id="count-user">55</h3>
+              </div>
+            </div>
+            <hr />
+            <div class="card-lower">
+              <img src="./img/info.png" alt="" />
+              <p>Learn More</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-upper">
+              <img src="./img/featured/messages.png" alt="" />
+              <div>
+                <p>Messages</p>
+                <h3 id="count-message">238</h3>
+              </div>
+            </div>
+            <hr />
+            <div class="card-lower">
+              <img src="./img/info.png" alt="" />
+              <p>Learn more</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-upper">
+              <img src="./img/featured/pending.png" alt="" />
+              <div>
+                <p>Subscribers</p>
+                <h3 id="count-subscriber">18</h3>
+              </div>
+            </div>
+            <hr />
+            <div class="card-lower">
+              <img src="./img/info.png" alt="" />
+              <p>Learn More</p>
+            </div>
+          </div>
+        </div>
+        <div class="summary">
+          <div class="summary-left">
+            <h3>Insights on Blog Comments per Year</h3>
+            <canvas id="bar-chart" style="height: 100%"> </canvas>
+          </div>
+          <div class="summary-right">
+            <h3>Top weekly Blog author</h3>
+            <div class="card-flex">
+              <div class="top-card">
+                <div class="top-card-img">
+                  <img src="./img/avatar-author.png" alt="" />
+                </div>
+                <div class="top-card-info">
+                  <h6>Carine Murangwa</h6>
+                  <p>carine.m@gmail.com</p>
+                  <p>Tech enthusiast</p>
+                </div>
+                <div class="top-card-metric">
+                  <h2>+12</h2>
+                </div>
+              </div>
+              <div class="top-card">
+                <div class="top-card-img">
+                  <img src="./img/avatar-author.png" alt="" />
+                </div>
+                <div class="top-card-info">
+                  <h6>Carine Murangwa</h6>
+                  <p>carine.m@gmail.com</p>
+                  <p>Tech enthusiast</p>
+                </div>
+                <div class="top-card-metric">
+                  <h2>+12</h2>
+                </div>
+              </div>
+              <div class="top-card">
+                <div class="top-card-img">
+                  <img src="./img/avatar-author.png" alt="" />
+                </div>
+                <div class="top-card-info">
+                  <h6>Carine Murangwa</h6>
+                  <p>carine.m@gmail.com</p>
+                  <p>Tech enthusiast</p>
+                </div>
+                <div class="top-card-metric">
+                  <h2>+12</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

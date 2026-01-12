@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/signup.css" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/e7b6b86684.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./handleSignup.js" defer></script>
+  </head>
+  <body>
+    <a href="./index.html">
+      <div id="go-home-2">Go Back</div>
+    </a>
+    <main>
+      <div class="container">
+        <div class="form">
+          <h1 class="form-title">Sign up</h1>
+          <form action="" id="signupForm">
+            <div class="field">
+              <label for="names">Fullname</label>
+              <input type="text" id="names" />
+              <div class="error"></div>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="text" id="email" />
+              <div class="error"></div>
+            </div>
+            <div class="field">
+              <label for="password">password</label>
+              <input type="text" id="password" />
+              <div class="error"></div>
+            </div>
+            <div class="field">
+              <label for="confirmPassword">Confirm password</label>
+              <input type="text" id="confirmPassword" />
+              <div class="error"></div>
+            </div>
+            <div
+              id="signup-success"
+              class="animate__animated animate__fadeInUp"
+            >
+              Hey
+            </div>
+            <button type="submit" class="signup-button">Sign up</button>
+            <p>OR</p>
+            <div class="google-btn">
+              <img class="google-icon" src="./img/google-logo.png" alt="" />
+              <p>Sign in with google</p>
+            </div>
+            <a href="./login.html">
+              <div class="google-btn">
+                <i class="fa-solid fa-lock"></i>
+                <p>Sign in with Email</p>
+              </div>
+            </a>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

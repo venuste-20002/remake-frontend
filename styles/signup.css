@@ -1,0 +1,212 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  position: relative;
+}
+
+#go-home {
+  /* border: 1px solid rgb(97, 88, 88); */
+  position: absolute;
+  top: 10px;
+  border-radius: 7px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  right: 50%;
+  width: 150px;
+  padding: 10px 30px;
+  color: rgb(200, 198, 198);
+  /* background: #171c28; */
+  background-color: rgba(0, 0, 0, 0.267);
+  font-family: "Montserrat", sans-serif;
+}
+
+#go-home-2 {
+  /* border: 1px solid rgb(97, 88, 88); */
+  position: absolute;
+  top: 10px;
+  border-radius: 7px;
+  text-align: center;
+  left: 10px;
+
+  width: 150px;
+  padding: 10px 30px;
+  color: rgb(200, 198, 198);
+  /* background: #171c28; */
+  background-color: rgba(0, 0, 0, 0.267);
+  font-family: "Montserrat", sans-serif;
+}
+
+#signup-success {
+  display: none;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  font-family: "Montserrat";
+}
+
+main {
+  min-height: 100vh;
+  background-image: url("../img/porfolio-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.267);
+  border-radius: 15px;
+  width: 25%;
+}
+
+.form {
+  padding: 30px 20px;
+  background-color: #fcfcfcf5;
+  border-radius: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form > h1 {
+  margin-bottom: 2.5rem;
+  font-size: 1.2rem;
+}
+.form > h1,
+form > p {
+  text-align: center;
+}
+
+.form input {
+  padding: 0.2rem 1rem;
+  border-radius: 7px;
+  border: 1px solid #bebbbb;
+  height: 35px;
+  display: block;
+  width: 100%;
+}
+
+.google-btn {
+  border-radius: 7px;
+  border: 1px solid #bebbbb;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 35px;
+  padding: 0.4rem 0 0.4rem 0;
+}
+
+.google-btn i {
+  font-size: 1.2rem;
+}
+
+.signup-p {
+  font-size: 0.8rem;
+}
+
+p > a {
+  color: #171c28;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+}
+
+form button {
+  padding: 0.6rem 0;
+  border-radius: 7px;
+  height: 35px;
+  border: 1px solid #bebbbb;
+  background-color: #171c28;
+  color: white;
+}
+
+label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  color: #545454;
+}
+
+input {
+  transition: border 0.2s ease-in-out;
+}
+
+/* Target input field that is descedent of an element with both .field and .success */
+.field.success input {
+  border: 1px solid #09c372;
+}
+
+/* Target input field that is descedent of an element with both .field and .error */
+.field.error input {
+  border: 1px solid #ff3860;
+}
+
+/* targets class error which is descendent of class field */
+.field .error {
+  color: #ff3860;
+
+  font-size: 10px;
+
+  padding-left: 3px;
+}
+
+.password-error {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 428px) {
+  main {
+    width: 100%;
+  }
+
+  .container {
+    width: 95%;
+
+    margin: 0 auto;
+  }
+
+  .form {
+    padding: 20px;
+  }
+
+  .form h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 429px) and (max-width: 600px) {
+  main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .container {
+    width: 40%;
+  }
+}
