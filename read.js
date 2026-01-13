@@ -182,7 +182,7 @@ loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
   validateInputs();
   if (checkTruthy(obj) === true) {
-    const loginEndpoint = "https://my-brand-atlp-be.onrender.com/api/login";
+    const loginEndpoint = "https://remake-backend-dmm6.onrender.com/api/login";
 
     const userData = {
       email: email.value,
@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   try {
     content[0].innerHTML = `<p class="loading">Loading...<p>`;
     const response = await fetch(
-      `https://my-brand-atlp-be.onrender.com/api/blogs/${idFromUrl}`
+      `https://remake-backend-dmm6.onrender.com/api/blogs/${idFromUrl}`
     );
     if (!response.ok) {
       throw new Error("Network response was not ok");
@@ -317,7 +317,7 @@ submitComment.addEventListener("submit", (e) => {
     email: "developer.purpose@gmail.com",
     content: userComment.value.trim(),
   };
-  const addCommentEndpoint = `https://my-brand-atlp-be.onrender.com/api/comments/${idFromUrl}`;
+  const addCommentEndpoint = `https://remake-backend-dmm6.onrender.com/api/comments/${idFromUrl}`;
   const fetchOptions = {
     method: "PUT",
     headers: {
@@ -358,7 +358,7 @@ if (token == null) {
 
   console.log(likeData);
 
-  const likeEndpoint = `https://my-brand-atlp-be.onrender.com/api/likes/${idFromUrl}`;
+  const likeEndpoint = `https://remake-backend-dmm6.onrender.com/api/likes/${idFromUrl}`;
   const likeEndpointOptions = {
     method: "PUT",
     headers: {

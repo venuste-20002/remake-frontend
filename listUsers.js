@@ -37,8 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location = "./blog.html";
   }
 
-  const usersEndpoint = "https://my-brand-atlp-be.onrender.com/api/users";
-  // const usersEndpoint = "http://localhost:5025/api/users";
+  const usersEndpoint = "https://remake-backend-dmm6.onrender.com/api/users";
   const fetchOptions = {
     method: "GET",
     headers: {
@@ -150,7 +149,7 @@ delUserForm.addEventListener("submit", (e) => {
   const id = idDel.value;
   e.preventDefault();
 
-  const userEndpoint = `https://my-brand-atlp-be.onrender.com/api/users/${id}`;
+  const userEndpoint = `https://remake-backend-dmm6.onrender.com/api/users/${id}`;
   const fetchOptions = {
     method: "DELETE",
     headers: {
@@ -262,7 +261,7 @@ editUserForm.addEventListener("submit", (e) => {
   console.log(id);
   e.preventDefault();
   console.log("Yay");
-  const toEdit = `https://my-brand-atlp-be.onrender.com/api/users/${id}`;
+  const toEdit = `https://remake-backend-dmm6.onrender.com/api/users/${id}`;
   const fetchOptions = {
     method: "PUT",
     headers: {

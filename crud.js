@@ -73,7 +73,8 @@ deleteBlogForm.addEventListener("submit", (e) => {
 const deleteBlog = async (arg) => {
   //console.log(arg);
   let id = showId.value;
-  const deleteBlogEndpoint = `https://my-brand-atlp-be.onrender.com/api/blogs/${id}`;
+  // const deleteBlogEndpoint = `http://localhost:5000/api/blogs/${id}`;
+  const deleteBlogEndpoint = `https://remake-backend-dmm6.onrender.com/api/blogs/${id}`;
   const fetchOptions = {
     method: "DELETE",
     headers: {
@@ -125,7 +126,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location = "./blog.html";
   }
 
-  const blogsEndpoint = "https://my-brand-atlp-be.onrender.com/api/blogs";
+  // const blogsEndpoint = "http://localhost:5000/api/blogs";
+  const blogsEndpoint = "https://remake-backend-dmm6.onrender.com/api/blogs";
   const fetchOptions = {
     method: "GET",
     headers: {
@@ -168,7 +170,8 @@ document.addEventListener("DOMContentLoaded", () => {
       author: inputBlogAuthor.value.trim(),
       content: blogContent.value.trim(),
     };
-    const addBlogsEndpoint = "https://my-brand-atlp-be.onrender.com/api/blogs";
+    // const addBlogsEndpoint = "http://localhost:5000/api/blogs";
+    const addBlogsEndpoint = "https://remake-backend-dmm6.onrender.com/api/blogs";
     const fetchOptions = {
       method: "POST",
       headers: {

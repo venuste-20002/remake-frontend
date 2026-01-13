@@ -10,7 +10,8 @@ let subscribeCount;
 
 document.addEventListener("DOMContentLoaded", () => {
   const getBlogs = async () => {
-    const getBogCount = "https://my-brand-atlp-be.onrender.com/api/blogcount";
+    // const getBogCount = "http://localhost:5000/api/blogcount";
+    const getBlogCount = "https://remake-backend-dmm6.onrender.com/api/blogcount";
 
     try {
       countBlog.innerHTML = "calculating...";
@@ -28,7 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
   const getUsers = async () => {
-    const getUserCount = "https://my-brand-atlp-be.onrender.com/api/usercount";
+    // const getUserCount = "http://localhost:5000/api/usercount";
+    const getUserCount = "https://remake-backend-dmm6.onrender.com/api/usercount";
 
     try {
       countUser.innerHTML = "calculating...";
@@ -45,8 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
   const getMessagesCount = async () => {
-    const getMessageCount =
-      "https://my-brand-atlp-be.onrender.com/api/messagecount";
+    // const getMessageCount = "http://localhost:5000/api/messagecount";
+    const getMessageCount = "https://remake-backend-dmm6.onrender.com/api/messagecount";
 
     try {
       countMessage.innerHTML = "calculating...";
@@ -64,8 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const getSubscribers = async () => {
-    const getSubscriberCount =
-      "https://my-brand-atlp-be.onrender.com/api/subscribercount";
+    // const getSubscriberCount = "http://localhost:5000/api/subscribercount";
+    const getSubscriberCount = "https://remake-backend-dmm6.onrender.com/api/subscribercount";
     try {
       countSubscriber.innerHTML = "Calculating...";
       const response = await fetch(getSubscriberCount);

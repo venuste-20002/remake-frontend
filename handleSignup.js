@@ -74,9 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
       //alert("We are good to go!")
 
       //let's do the signup process
-      const signupEndpoint =
-        "https://my-brand-atlp-be.onrender.com/api/register";
-      // const signupEndpoint = "http://localhost:5025/api/register";
+      const signupEndpoint = "https://remake-backend-dmm6.onrender.com/api/register";
 
       const userData = {
         name: fullName.value,

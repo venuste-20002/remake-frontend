@@ -47,8 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
     username = decodedToken.name;
     authorInput.value = username;
   }
-
-  const blogEndpoint = `https://my-brand-atlp-be.onrender.com/api/blogs/${idFromUrl}`;
+  // const blogEndpoint = `http://localhost:5000/api/blogs/${idFromUrl}`;
+  const blogEndpoint = `https://remake-backend-dmm6.onrender.com/api/blogs/${idFromUrl}`;
   const fetchOptions = {
     method: "GET",
     headers: {
@@ -87,7 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
       author: authorInput.value.trim(),
     };
     console.log(updateBlogData);
-    const updateBlogEndpoint = `https://my-brand-atlp-be.onrender.com/api/blogs/${idFromUrl}`;
+    // const updateBlogEndpoint = `http://localhost:5000/api/blogs/${idFromUrl}`;
+    const updateBlogEndpoint = `https://remake-backend-dmm6.onrender.com/api/blogs/${idFromUrl}`;
     const fetchOptions2 = {
       method: "PUT",
       headers: {

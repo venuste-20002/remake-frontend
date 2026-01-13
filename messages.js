@@ -39,7 +39,7 @@ const deleteMessage = (name, email, content, id) => {
 
 deleteMsgForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const deleteMessagesEndpoint = `https://my-brand-atlp-be.onrender.com/api/messages/${idToDelete}`;
+  const deleteMessagesEndpoint = `https://remake-backend-dmm6.onrender.com/api/messages/${idToDelete}`;
   const fetchOptions = {
     method: "DELETE",
     headers: {
@@ -165,8 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const getMessages = async () => {
-    const messagesEndpoint =
-      "https://my-brand-atlp-be.onrender.com/api/messages";
+    const messagesEndpoint = "https://remake-backend-dmm6.onrender.com/api/messages";
     const fetchOptions = {
       method: "GET",
       headers: {

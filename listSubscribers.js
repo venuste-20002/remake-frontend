@@ -37,8 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location = "./blog.html";
   }
 
-  const subscribersEndpoint =
-    "https://my-brand-atlp-be.onrender.com/api/subscribe";
+  const subscribersEndpoint = "https://remake-backend-dmm6.onrender.com/api/subscribe";
 
   const fetchOptions = {
     method: "GET",
@@ -190,7 +189,7 @@ const editSubscriber = (id, email, fullName, status) => {
       const statusData = {
         status: subStatus2.value,
       };
-      const updateSubEndpoint = `https://my-brand-atlp-be.onrender.com/api/subscribe/${id}`;
+      const updateSubEndpoint = `https://remake-backend-dmm6.onrender.com/api/subscribe/${id}`;
       const fetchOptions = {
         method: "PUT",
         headers: {

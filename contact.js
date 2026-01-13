@@ -79,8 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     //let's do the signup process
-    const sendMessageEndpoint =
-      "https://my-brand-atlp-be.onrender.com/api/messages";
+    // const sendMessageEndpoint ="http://localhost:5000/api/messages";
+    const sendMessageEndpoint = "https://remake-backend-dmm6.onrender.com/api/messages";
 
     const fetchOptions = {
       method: "POST",
@@ -181,8 +181,8 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(userData);
 
     //attempt adding subscriber
-    const addSubscriberEndpoint =
-      "https://my-brand-atlp-be.onrender.com/api/subscribe";
+    // const addSubscriberEndpoint = "http://localhost:5000/api/subscribe";
+    const addSubscriberEndpoint = "https://remake-backend-dmm6.onrender.com/api/subscribe";
     const fetchOptions = {
       method: "POST",
       headers: {

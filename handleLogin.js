@@ -65,8 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
     validateInputs();
     if (checkTruthy(obj) === true) {
       //signupMessage(signupSuccessDiv,"Good job", "#198754")
-      const loginEndpoint = "https://my-brand-atlp-be.onrender.com/api/login";
-      // const loginEndpoint = "http://localhost:5025/api/login";
+      // const loginEndpoint = "http://localhost:5000/api/login";
+      const loginEndpoint = "https://remake-backend-dmm6.onrender.com/api/login";
       const userData = {
         email: email.value,
         password: password.value,

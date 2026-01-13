@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       blogSection.innerHTML = `<h2 class="empty-blog">Loading, please wait...</h2>`;
       const response = await fetch(
-        "https://my-brand-atlp-be.onrender.com/api/blogs"
+        "https://remake-backend-dmm6.onrender.com/api/blogs"
       );
       const jsonResponse = await response.json();
       const data = jsonResponse.data;
